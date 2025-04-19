@@ -174,9 +174,19 @@ y negativ | falsch positiv (FP)  | richtig negativ (TN)
 ## Neuronale Netze: Perzeptron
 
 $$
-x=\begin{bmatrix}x_1\\x_2\\...\\x_d\end{bmatrix}\in\!R^d
+x=\begin{bmatrix}
+x_1 \\
+x_2 \\
+... \\
+x_d
+\end{bmatrix}\in\!R^d
 \qquad
-w=\begin{bmatrix}w_1\\w_2\\...\\w_d\end{bmatrix}\in\!R^d
+w=\begin{bmatrix}
+w_1 \\
+w_2 \\
+... \\
+w_d
+\end{bmatrix}\in\!R^d
 \qquad
 y\in \{0,1\}
 $$
