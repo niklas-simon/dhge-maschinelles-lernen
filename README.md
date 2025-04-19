@@ -62,7 +62,7 @@ $o_2$|1|0|0
 $o_3$|1|0|0
 
 - (Halb-)Ordnungsrelation $\prec$ zur Beschreibung von Rangfolgen
-    - Reflexivität: $\forall x: x \prec x$$
+    - Reflexivität: $\forall x: x \prec x$
     - Antisymmetrie: $\forall x, y: x \prec y \wedge y \prec x \rightarrow x = y$
     - Transitivität: $\forall x, y, z: x \prec y \wedge y \prec z \rightarrow x \prec z$
     - (Totalität: $\forall x, y: x \prec y \vee y \prec x)$
