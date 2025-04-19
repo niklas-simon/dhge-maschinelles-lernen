@@ -25,7 +25,7 @@ $P(x_j | y_i)$: Wahrscheinlichkeit, dass Objekt $x_j$ in Klasse $y_i$ enthalten 
 ### Lernaufgaben
 - Lernaufgaben legen Ein- und Ausgaben fest: "Entscheide, ob Email m Spam oder Ham ist"
 - Eingabedaten sind ein Merkmalsraum $X$ mit einer Dimension $d$, z.B. $x \in X \subseteq R^d$
-- Ausgaben $Y$ können z.B. Klassen oder reelle Zahlen sein ($Y = {Spam, Ham}$ oder $Y = \R$)
+- Ausgaben $Y$ können z.B. Klassen oder reelle Zahlen sein ($Y = {Spam, Ham}$ oder $Y = \!R$)
 - Ziel der Lernaufgabe: Modell der Funktion $f: X \rightarrow Y$ lernen
 
 ## Skalentypen
@@ -53,18 +53,20 @@ $P(x_j | y_i)$: Wahrscheinlichkeit, dass Objekt $x_j$ in Klasse $y_i$ enthalten 
 
 ## Beziehungen
 
-- Adjazenzmatrix zur Beschreibung von Beziehungen zw. Objekten  
-  A|$o_1$|$o_2$|$o_3$
-  -|-|-|-
-  $o_1$|0|1|1
-  $o_2$|1|0|0
-  $o_3$|1|0|0
+- Adjazenzmatrix zur Beschreibung von Beziehungen zw. Objekten 
+
+A|$o_1$|$o_2$|$o_3$
+-|-|-|-
+$o_1$|0|1|1
+$o_2$|1|0|0
+$o_3$|1|0|0
+
 - (Halb-)Ordnungsrelation $\prec$ zur Beschreibung von Rangfolgen
     - Reflexivität: $\forall x: x \prec x$$
     - Antisymmetrie: $\forall x, y: x \prec y \wedge y \prec x \rightarrow x = y$
     - Transitivität: $\forall x, y, z: x \prec y \wedge y \prec z \rightarrow x \prec z$
     - (Totalität: $\forall x, y: x \prec y \vee y \prec x)$
-- Beschreibung Ähnlichkeit durch Abstandsfunktion $d: X \times X \rightarrow \R$
+- Beschreibung Ähnlichkeit durch Abstandsfunktion $d: X \times X \rightarrow \!R$
     - Symmetrie: $\forall x, y: d(x, y) = d(y, x)$
     - Positivheit: $\forall x, y: d(x, y) \geq 0$
     - Definitheit: $\forall x, y: d(x, y) = 0 \rightarrow x = y$
@@ -91,7 +93,7 @@ $P(x_j | y_i)$: Wahrscheinlichkeit, dass Objekt $x_j$ in Klasse $y_i$ enthalten 
 - Reduktion von Wertebereichen (z.B. $m_3$) -> Feature Selection
 
 ID|$m_1$|$m_2$|$m_3$| |ID|$m_1$|$m_3$
--|-|-|-|-|-|-|-|-
+-|-|-|-|-|-|-|-
 o_1|0.1|9.2|+4| |o_1|0.1|high
 o_2|0.9|3.4|-1| |o_3|0.6|low
 o_3|0.6|0.3|-7
@@ -121,7 +123,7 @@ Normierung numerischer Skalen:
 ## Regression
 
 - überwachtes Lernen
-- Ziel: $f: X\rightarrow y|y=\R$ (möglichst gute Annäherung an alle $X$ und $y$)
+- Ziel: $f: X\rightarrow y|y=\!R$ (möglichst gute Annäherung an alle $X$ und $y$)
 
 ### Lineare Regression
 
@@ -145,11 +147,11 @@ Möge Cthulhu mir beistehen...
 - Unabhängigkeit der Trainings- und Testdaten sicherstellen
 - Üblicherweise 80% Trainings- und 20% Testdaten
 
-            |     |Trainingsfehler||
-------------|-----|---------------|------------------
-            |     |klein          |groß
-  Testfehler|klein|gutes Modell   |-
-            |groß |Überanpassung  |Modell lernt nicht
+|| |Trainingsfehler| || 
+-|-|-|-|-
+ | | |klein|groß
+Testfehler|klein|gutes Modell|-
+||groß|Überanpassung|Modell lernt nicht
 
 - Überanpassung: Modell zu stark an Trainingsdaten angepasst
 - Unteranpassung: Modell nicht speziell genug für Daten
@@ -157,10 +159,10 @@ Möge Cthulhu mir beistehen...
   ![Kreuzvalidierung](./img/cross_validation.png)
 - Fehlerdarstellung in Konfusionsmatrix  
 
-            |$\^y$ positiv           |$\^y$ negativ
-------------|----------------------|----------------
-  y positiv | richtig positiv (TP) | falsch negativ (FN)
-  y negativ | falsch positiv (FP)  | richtig negativ (TN)
+||$\^y$ positiv|$\^y$ negativ
+-|-|-
+y positiv | richtig positiv (TP) | falsch negativ (FN)
+y negativ | falsch positiv (FP)  | richtig negativ (TN)
 
 - $\rightarrow$ Summe der Vorhersagen ist korrekt
 - Sensitivität (Recall): $R=\frac{TP}{TP+FN}$
@@ -172,9 +174,9 @@ Möge Cthulhu mir beistehen...
 ## Neuronale Netze: Perzeptron
 
 $$
-x=\begin{bmatrix}x_1\\x_2\\...\\x_d\end{bmatrix}\in\R^d
+x=\begin{bmatrix}x_1\\x_2\\...\\x_d\end{bmatrix}\in\!R^d
 \qquad
-w=\begin{bmatrix}w_1\\w_2\\...\\w_d\end{bmatrix}\in\R^d
+w=\begin{bmatrix}w_1\\w_2\\...\\w_d\end{bmatrix}\in\!R^d
 \qquad
 y\in \{0,1\}
 $$
